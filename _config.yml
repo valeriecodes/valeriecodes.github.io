@@ -1,0 +1,23 @@
+title: Valerie Woolard Srinivasan
+email: valerie.woolard@gmail.com
+description: "Personal site of Valerie Woolard Srinivasan: software engineer, speaker, podcast recommender, and purveyor of animal GIFS."
+baseurl: "/"
+url: "http://valerie.codes"
+twitter_username: valeriecodes
+github_username:  valeriecodes
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+  - scope:
+      path: "assets/images"
+    values:
+      image: true

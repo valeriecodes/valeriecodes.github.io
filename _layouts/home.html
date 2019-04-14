@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat:300" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/stylesheets/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="assets/images/susanlin_portrait.jpg">
+        <div class="glasses"></div>
+      </div>
+      <div class="col">
+        <h1>{{ site.title }}</h1>
+        <p>Greetings and welcome to my website. I am a software engineer, speaker, podcast recommender, and purveyor of animal GIFS. I love writing code, mentoring, and running. Currently leading an engineering team and serving on the board of <a href="https://rubytogether.org/" target="_">Ruby Together</a>. Drop me a <a href="mailto:valerie.woolard@gmail.com">line</a> or use the links below to find me elsewhere on the internet.
+        {% include links.html %}
+      </div>
+    </div>
+    {% include footer.html %}
+  </div>
+  <script src="/assets/javascripts/konami.js"></script>
+  <script>
+    var easter_egg = new Konami(function() { alert('Konami Code!')});
+  </script>
+</body>
+</html>
