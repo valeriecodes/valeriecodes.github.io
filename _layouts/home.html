@@ -14,10 +14,10 @@
     <div class="row">
       <div class="col">
         <img src="assets/images/susanlin_portrait.jpg">
-        <div class="glasses"></div>
+        <div id="glasses"><img src="assets/images/sunglasses_transparent.png"></div>
       </div>
       <div class="col">
-        <h1>{{ site.title }}</h1>
+        <h1 id="headline">{{ site.title }}</h1>
         <p>Greetings and welcome to my website. I am a software engineer, speaker, podcast recommender, and purveyor of animal GIFS. I love writing code, mentoring, and running. Currently leading an engineering team and serving on the board of <a href="https://rubytogether.org/" target="_">Ruby Together</a>. Drop me a <a href="mailto:valerie.woolard@gmail.com">line</a> or use the links below to find me elsewhere on the internet.
         {% include links.html %}
       </div>
@@ -26,7 +26,15 @@
   </div>
   <script src="/assets/javascripts/konami.js"></script>
   <script>
-    var easter_egg = new Konami(function() { alert('Konami Code!')});
+    function changeText() {
+      var text = document.getElementById('headline');
+      text.innerHTML = "Deal with it";
+    }
+    function resetText() {
+      var text = document.getElementById('headline');
+      text.innerHTML = "Valerie Woolard Srinivasan";
+    }
+    var easter_egg = new Konami(function() { setTimeout(changeText,1000);; document.getElementById('glasses').style.animationPlayState = 'running'; setTimeout(resetText,5000);});
   </script>
 </body>
 </html>

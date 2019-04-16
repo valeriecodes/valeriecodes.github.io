@@ -16,3 +16,28 @@ p {
 .link-icons {
   font-size: 1.5em;
 }
+#glasses {
+  position: absolute;
+  animation-play-state: paused;
+  animation-name: slidedown;
+  animation-iteration-count: 1;
+  animation-duration: 7s;
+}
+
+@keyframes slidedown {
+  0% {
+    top: -600px;
+    left: -70px;
+    opacity: 1
+  }
+
+  75% {
+    top: -60px;
+    left: -70px;
+    opacity: 1
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
