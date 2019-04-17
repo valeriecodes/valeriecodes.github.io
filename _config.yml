@@ -9,7 +9,7 @@ github_username:  valeriecodes
 # Build settings
 markdown: kramdown
 theme: minima
-plugins:
+plugins_dir:
   - jekyll-feed
 
 defaults:
