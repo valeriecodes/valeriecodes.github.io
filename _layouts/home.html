@@ -34,7 +34,12 @@
       var text = document.getElementById('headline');
       text.innerHTML = "Valerie Woolard Srinivasan";
     }
-    var easter_egg = new Konami(function() { setTimeout(changeText,1000);; document.getElementById('glasses').style.animationPlayState = 'running'; setTimeout(resetText,5000);});
+    function runGlassesAnimation () {
+      glassesDiv = document.getElementById('glasses');
+      glassesDiv.style.animationPlayState = 'running';
+      setTimeout(function() { glassesDiv.style.animationPlayState = 'initial'; glassesDiv.style.display = 'none'}, 6500)
+    }
+    var easter_egg = new Konami(function() { runGlassesAnimation(); setTimeout(changeText,1000);  setTimeout(resetText,5500);});
   </script>
 </body>
 </html>
