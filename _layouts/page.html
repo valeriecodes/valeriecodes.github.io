@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-  <title>{{ site.title }}</title>
+  <title>{{ page.title }} - {{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
   <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
   <meta charset="utf-8">
@@ -17,10 +17,8 @@
         <div id="glasses"><img src="assets/images/sunglasses_transparent.png"></div>
       </div>
       <div class="col">
-        <h1 id="headline">{{ site.title }}</h1>
-        <p>Greetings and welcome to my website. I am a software engineer, speaker, podcast recommender, and purveyor of animal GIFS. I love writing code, mentoring, and running.</p>
-        <p>I'm currently leading an engineering team and serving on the board of <a href="https://rubytogether.org/" target="_">Ruby Together</a>. I have given an assortment of <a href="talks.html">conference talks</a>. Drop me a <a href="mailto:valerie.woolard@gmail.com">line</a> or use the links below to find me elsewhere on the internet.</p>
-        {% include links.html %}
+        <h1 id="headline">{{ page.title }}</h1>
+        {{ content }}
       </div>
     </div>
     {% include footer.html %}
